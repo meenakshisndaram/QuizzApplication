@@ -24,7 +24,6 @@ public class Questioncontroller {
     @PostMapping("add")
     public ResponseEntity<String >addQuestion(@RequestBody Question question){
        return questionService.addQuestions(question);
-        System.out.println("Maverick")
 
 
     }
