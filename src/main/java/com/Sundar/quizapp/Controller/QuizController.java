@@ -19,8 +19,7 @@ public class QuizController {
     @PostMapping("create")
     public ResponseEntity<String> createQuiz(@RequestParam String category,@RequestParam int numQ, @RequestParam String title){
          System.out.println("Hello god im sundar1");
-        System.out.println("Hello god im sundar");
-        return quizService.createQuiz(category,numQ,title);
+         return quizService.createQuiz(category,numQ,title);
                
         
     }
