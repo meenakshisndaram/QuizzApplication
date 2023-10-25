@@ -18,7 +18,6 @@ public class QuizController {
     Quizservice quizService;
     @PostMapping("create")
     public ResponseEntity<String> createQuiz(@RequestParam String category,@RequestParam int numQ, @RequestParam String title){
-         System.out.println("Hello god im sundar1");
          return quizService.createQuiz(category,numQ,title);
                
         
@@ -26,8 +25,7 @@ public class QuizController {
 
     @GetMapping("get/{id}")
     public  ResponseEntity<List<QuestionWrapper>>getQuizQuestions(@PathVariable Integer id){
-
-   return   quizService.getQuizQuestions(id);
+        return   quizService.getQuizQuestions(id);
     }
     @PostMapping("submit/{id}")
     public ResponseEntity<Integer>submitQuiz(@PathVariable Integer id,@RequestBody List<Response> responses){
